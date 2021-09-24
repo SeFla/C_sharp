@@ -16,16 +16,18 @@ using System;
 _______________________________________________________________________________
 using System;
 
-class Program
+  class Program
 
 {
-  public static void Main (string[] args)
-  
-  {
-  
+   static void Main (string[] args)
+   {
+
+      Console.WriteLine("Enter your age:");                     // här är ett program som byter string (från input) till intger, därefter skriver ut siffran med text.
+      int age = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine("Your age is: " + age);
     
-    
-  }
+   }
   
 }
+
 
