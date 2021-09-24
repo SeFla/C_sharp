@@ -1,0 +1,28 @@
+using System;
+
+class Program
+
+{
+  public static void Main (string[] args)
+  {
+  
+    Console.WriteLine ("Hello world");
+    
+  }
+  
+}
+_____________________________________________________________________________________________________________
+using System;
+
+  class Program
+
+{
+   static void Main (string[] args)
+   {
+  
+      Console.WriteLine ("Hello world");
+      Console.ReadKey();
+    
+   }
+  
+}
