@@ -1,0 +1,17 @@
+using System;
+
+  class Program
+
+{
+   static void Main (string[] args)
+   {
+
+      Console.WriteLine("Enter user name:");
+      string userName = Console.ReadLine();
+      Console.WriteLine("Username is: " + userName);
+    
+   }
+  
+}
+
+
