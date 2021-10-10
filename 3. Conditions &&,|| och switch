@@ -1,0 +1,114 @@
+// lätt bio biljetter
+
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "mOvies";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+
+        Console.WriteLine("Welcome! Tickets are 5$. Plase enter cash ");
+
+        int cash = Convert.ToInt32(Console.ReadLine());     // vi omvandlar input som är stander till strig till intgir
+
+        if (cash < 5)
+        {
+            Console.WriteLine("That's not enough money.");
+        }
+        else if (cash == 5)
+        {
+            Console.WriteLine("Thanks, your ticket is XG3ff");
+        }
+        else
+        {
+            int change = cash - 5;                                                                          // change när input är mer än 5$
+            Console.WriteLine("Here is your ticket Ws53X and " + change+ " dollars in change.");
+        }
+
+        Console.ReadKey();
+
+    }
+
+}
+______________________________________________________________________________________________________
+// && och || och mer
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        int age;
+        int height;
+
+        Console.Write("Please input age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Please input height (cm): ");
+        height = Convert.ToInt32(Console.ReadLine());
+
+        if(age >= 18 && height >= 160)      // den && är för om en av conditions stämmer inte med variabler så är output youCan'tEnter(|| för om en av input sätmmer så kommer det bli you can enter)
+        {
+            Console.WriteLine("You can enter!");
+        }
+        else
+        {
+            Console.WriteLine("You dont't meet the requirments");
+        }
+
+        Console.ReadKey();
+    }
+
+}
+
+____________________________________________________________________________________________________________________
+//switch
+
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        Console.Write("Input a number between 1 and 5:");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        switch(num)
+        {
+            case 1:
+                Console.WriteLine("One");
+                break;
+            case 2:
+                Console.WriteLine("Two");
+                break;
+            case 3:
+                Console.WriteLine("Tree");
+                break;
+            case 4:
+                Console.WriteLine("Four");
+                break;
+            case 5:
+                Console.WriteLine("Five");
+                break;
+
+        }
+
+        Console.ReadKey();
+    }
+
+}
