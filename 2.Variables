@@ -1,0 +1,87 @@
+// text + input
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        Console.WriteLine("Hello!\nWhat is your name: ");
+        String userName = Console.ReadLine();
+
+        Console.WriteLine("Hello " + userName + ", nice to meet you!");
+
+        Console.ReadKey();
+
+    }
+
+}
+________________________________________________________________________________
+// lätt miniräknäre. 
+
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        double num01;
+        double num02;
+
+        Console.Write("input a number: ");
+
+        num01 = Convert.ToDouble(Console.ReadLine() );
+
+        Console.Write("Input a second number: ");
+        num02 = Convert.ToDouble( Console.ReadLine () );
+
+        double result = num01 * num02;
+        Console.WriteLine("The result is " + result);
+
+        Console.ReadKey();
+
+    }
+
+}
+____________________________________________________________________________________________________________
+// lägesmått räknäre
+
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        double num01;
+        double num02;
+        double num03;
+
+        Console.Write("Hi, to get the avrige, enter first number: ");
+
+        num01 = Convert.ToDouble(Console.ReadLine() );
+
+        Console.Write("Enter a second number: ");
+        num02 = Convert.ToDouble( Console.ReadLine () );
+
+        Console.Write("Enter the third number: ");
+        num03 = Convert.ToDouble(Console.ReadLine());
+
+        double result = (num01 + num02 + num03)/3 ;
+        Console.WriteLine("The avrige is " + result);
+
+        Console.ReadKey();
+
+    }
+
+}
