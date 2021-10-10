@@ -1,0 +1,126 @@
+// for loop till 10
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        for (int i = 1; i  < 10; i++)
+        {
+            Console.Write(i + 1);
+        }
+
+        Console.ReadKey();
+
+    }
+______________________________________
+// också for loop till 10
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        for (int i = 1; i  <=10 ; i++)   //ändring från den första
+          //  Before  ;condition; after
+        {
+            Console.Write(i);          //ändring från den första
+        }
+
+        Console.ReadKey();
+
+    }
+ __________________________________
+ // skriva ut från 10 till 1
+ using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        for (int i = 10; i  >0; i--)
+        {
+            Console.Write(i);
+        }
+
+        Console.ReadKey();
+
+    }
+__________________________________________________________________________________________________
+// tar input som är loopen och sen köra den på ^2
+
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        Console.Write("How many cool nubers do you wnat: ");
+
+        int count = Convert.ToInt32(Console.ReadLine());
+        for (int i = 1; i <= count; i++)
+        {
+            double result = Math.Pow(2, i);
+            Console.WriteLine(result);
+        }
+
+        Console.ReadKey();
+
+    }
+ __________________________________________________________________________________________________________________ 
+// tärning (random) med while
+
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "skynet";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        Random numberGen = new Random();
+
+        int roll = 0;
+        int attempts = 0;
+
+        Console.WriteLine("Press enter to roll the die.");
+
+        while( roll != 6)
+        {
+
+            roll = numberGen.Next(1, 7);
+            Console.WriteLine("you rolled: " + roll);
+            attempts++;
+        }
+
+        Console.WriteLine("It took you " + attempts + " attempts to roll a six.");
+
+
+        Console.ReadKey();
+
+    }
+
+}
