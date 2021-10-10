@@ -1,0 +1,42 @@
+// console typsnitt färg/console storlek/ console title namn
+using System;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Skynet";                             //detta för console eller app title namen
+            Console.ForegroundColor = ConsoleColor.Green;         // console färg
+            Console.WindowHeight =  30;                           // consoles storlek
+            Console.WriteLine("Hello World!");
+            Console.ReadKey();
+        }
+    }
+}
+_________________________________________________________________________________
+//ny mening med \n och input
+
+using System;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("my name is RX-9000.\nI'm an AI sent from the future to distory mankind.");       //  \n gör ny mening 
+            Console.WriteLine("what is your favorite color? ");
+
+            Console.ReadLine();
+
+            Console.WriteLine("Cool! Mian is blod");
+
+            Console.ReadKey();
+
+
+        }
+    }
+}
+}
