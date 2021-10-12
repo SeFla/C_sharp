@@ -1,0 +1,17 @@
+using System;
+
+  class Program
+
+{
+   static void Main (string[] args)
+   {
+  	
+      Console.Title = "skynet";
+      Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+      Console.WriteLine ("Hello world");
+      Console.ReadKey();
+    
+   }
+  
+}
