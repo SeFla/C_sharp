@@ -98,7 +98,7 @@ class Program
     static void Main(string[] args)
     {
 
-        Console.Title = "skynet";
+        Console.Title = "Dice game";
         Console.ForegroundColor = ConsoleColor.DarkGreen;
 
         Random numberGen = new Random();
@@ -106,74 +106,19 @@ class Program
         int roll = 0;
         int attempts = 0;
 
-        Console.WriteLine("Press enter to roll the die.");
 
-        while( roll != 6)
+
+        while (roll != 6)
         {
-____________________________________________________________________________________________________-
-using System;
-
-class Program
-
-{
-    static void Main(string[] args)
-    {
-
-        Console.Title = "skynet";
-        Console.ForegroundColor = ConsoleColor.DarkGreen;
-
-        Random numberGen = new Random();
-
-        int roll01 = 0;
-        int roll02 = 1;
-        int attempts = 0;
-
-        Console.WriteLine("Press enter to roll the diees.");
-
-        while (roll01 != roll02)
-        {
-            Console.ReadKey();
-
-            roll01 = numberGen.Next(1, 7);
-            roll02 = numberGen.Next(1, 7);
-
-            Console.WriteLine("Roll 1: " + roll01);
-            Console.WriteLine("Roll 2: " + roll02 + "\n");
-
-
-            Console.WriteLine(roll01 + roll02);
-            while (roll01 == roll02)
-            {
-                Console.WriteLine("total:" + roll01 + roll02);
-                break;
-            }
-
-            
-            attempts++;
-        }
-
-        Console.WriteLine("It took you " + attempts + " attempts to roll two of a kind.");
-
-
-        Console.ReadKey();
-
-    }
-
-}
             roll = numberGen.Next(1, 7);
-            Console.WriteLine("you rolled: " + roll);
+            Console.WriteLine("You rolled: " + roll);
             attempts++;
         }
 
-        Console.WriteLine("It took you " + attempts + " attempts to roll a six.");
-
+        Console.WriteLine("It took You " + attempts + "attempts to roll a six .");
 
         Console.ReadKey();
-
-    }
-
-}
-___________________________________
+____________________________________________________________________________________________________
 // två tärnigar
 using System;
 
