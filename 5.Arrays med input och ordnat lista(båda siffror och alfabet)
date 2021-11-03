@@ -11,7 +11,7 @@ class Program
         Console.Title = "skynet";
         Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-        string[] movies = { "Unbroken", "The worlds news", "powerBuffGirls", "The platform" };
+        string[] movies = { "Unbroken", "The worlds news", "powerBuffGirls", "The platform" };          // här har vi listan och den börjar med index 0 alltså "Unbroken"
 
         for (int i = 0; i < movies.Length; i++)
         {
@@ -24,7 +24,7 @@ class Program
 
 }
 ____________________________________________________________________________________________________________________
-// med använing till input skaper vi lista med alabet ordning
+// med användning till input skaper vi lista med alfabetet ordning
 
 using System;
 
@@ -55,5 +55,85 @@ class Program
         Console.ReadKey();
 
     }   
+
+}
+_____________________________________________________________________________________________________
+// lista och vi adderar saker till den
+
+using System;
+using System.Collections.Generic;
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "Arrays";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+
+        List<string> shoppingList = new List<string>();
+
+        shoppingList.Add("Dreams");
+        shoppingList.Add("Miracles");
+        shoppingList.Add("Rainbows");
+        shoppingList.Add("Pony");
+
+        for (int i = 0; i < shoppingList.Count; i++)
+        {
+            Console.WriteLine(shoppingList[i]);
+        }
+        
+
+        Console.ReadKey();
+
+    }
+
+}
+___________________________________________________________________________________________________________________
+using System;
+using System.Collections.Generic;
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "Arrays";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+
+        List<string> shoppingList = new List<string>();
+
+        shoppingList.Add("Dreams");
+        shoppingList.Add("Miracles");
+        shoppingList.Add("Rainbows");
+        shoppingList.Add("Pony");
+        shoppingList.Add("clock");
+
+
+        for (int i = 0; i < shoppingList.Count; i++)
+        {
+            Console.WriteLine(shoppingList[i]);
+        }
+
+        Console.WriteLine("_______________________________\nAfter removing:");
+        Console.WriteLine();
+
+        shoppingList.Remove("clock");
+
+        shoppingList.RemoveAt(1);
+
+        for (int i = 0; i < shoppingList.Count; i++)
+        {
+            Console.WriteLine(shoppingList[i]);
+        }
+
+
+
+
+        Console.ReadKey();
+
+    }
 
 }
