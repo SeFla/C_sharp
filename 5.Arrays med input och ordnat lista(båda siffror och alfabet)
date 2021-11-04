@@ -91,6 +91,8 @@ class Program
 
 }
 ___________________________________________________________________________________________________________________
+// Efter ändring
+
 using System;
 using System.Collections.Generic;
 class Program
@@ -131,6 +133,46 @@ class Program
 
 
 
+
+        Console.ReadKey();
+
+    }
+
+}
+_______________________________________________________________________
+//utmanningen
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.WriteLine("Hur många studenter finns: ");
+
+
+        int studentCount = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Skriv studenters namner: ");
+
+        string[] students = new string[studentCount];
+
+
+        for (int i = 0; i < studentCount; i++)
+        {
+            students[i] = Console.ReadLine();
+        }
+
+        Console.WriteLine("---------------");
+        Console.WriteLine("\nHere they are alphabettically:\n ");
+
+        Array.Sort(students);
+
+        for (int i = 0; i < studentCount; i++)
+        {
+            Console.WriteLine(students[i]);
+        }
 
         Console.ReadKey();
 
