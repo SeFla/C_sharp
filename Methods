@@ -1,0 +1,130 @@
+// lätt ex på methods 
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "Methods";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        
+        PrintNumber(12,5);                                  // vi har funktionen PrintNumber och vi har stoppat  i 12 till numb01 och 5 till numb02, samtid kallar vi metoden.
+
+       
+        Console.ReadKey();
+
+        static void PrintNumber(int numb01, int numb02)     // här definierar vi num01,num02 
+        {
+
+            Console.WriteLine(numb01 + numb02);             // här plusar vi de
+        }
+
+    }
+
+}
+______________________________________________________________________________________________________
+//lätt ex på methods
+
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+
+        Console.Title = "Methods";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        
+        MeetAlien();
+        
+
+        Console.ReadKey();
+
+        static void MeetAlien()
+        {
+            Random numberGen = new Random();
+
+            string name = "X-" + numberGen.Next(10, 9999);
+            int age = numberGen.Next(10, 500);
+            Console.WriteLine("Hi, I'm " + name);
+            Console.WriteLine("I'm " + age + " years old.");
+            Console.WriteLine("Oh, and I'm an alien.");
+        }
+
+    }
+
+}
+_________________________________________________________________________________________________
+//ex på methods
+
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+
+        Console.Title = "Methods";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        Multiply(3, 12);
+        Multiply(2, 4);
+        Multiply(1, 12);
+        Multiply(3, 32);
+
+        
+
+        Console.ReadKey();
+
+        static void Multiply(int numb01, int numb02)
+        {
+            int result = numb01 * numb02;
+            Console.WriteLine("The result is " + result);
+        }
+
+    }
+
+}
+_________________________________________________________________________________
+// ex på metod men vi använder värdarna på arbeta
+
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+
+        Console.Title = "Methods";
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        int result = Multiply(4, 12);
+
+        Console.WriteLine("The result is "+result);
+
+        if (result % 2 == 0)
+        {
+            Console.WriteLine(result + " is an even number!");
+        }
+        else
+        {
+            Console.WriteLine(result + " is an uneven number !");
+        }
+        
+        
+
+        Console.ReadKey();
+
+        static int  Multiply(int numb01, int numb02)        // int som kommer inte att retunera 
+        {
+            int result = numb01 * numb02;
+            return result;
+        }
+
+    }
+
+}
+
+
