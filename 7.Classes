@@ -1,0 +1,324 @@
+// lätt ex på classer
+using System;
+
+class Program
+
+{
+    static void Main(string[] args)
+    {
+
+        Console.Title = "Program";
+        Console.ForegroundColor = ConsoleColor.Gray;
+
+
+        Cat cat01 = new Cat();
+
+        cat01.name = "Cat Stevens";
+        cat01.age = 1;
+        cat01.weight = 1.5;
+
+        cat01.utryckaDig();
+
+        Console.WriteLine("");
+
+        Cat cat02 = new Cat();
+
+        cat02.name = "Meowly Cyrus";
+        cat02.age = 12;
+        cat02.weight = 3;
+
+        cat02.utryckaDig();
+
+
+        Console.ReadKey();
+
+    }
+
+}
+
+class Cat
+{
+    public string name;
+    public int age;
+    public double weight;
+
+    public void utryckaDig()
+    {
+        Console.WriteLine(name + " says meao!");
+        Console.WriteLine("its " + age+" years old.");
+        Console.WriteLine(weight + " kg");
+
+    }
+}
+________________________________________________________________________________________________________
+// demo för klass projekt
+using System;
+
+
+
+class Wizard
+{
+    public string name;
+    public string favoriteSpell;
+    public int spellSlots;
+    public float experience;
+
+    public void CastSpell()
+    {
+
+        Console.WriteLine(name + " casts " + favoriteSpell);
+        spellSlots--;
+
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Title = "Wizerd";
+        
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(@"
+─╔╗─────────────────╔══╗─╔╗╔╗
+─║╠═╦═╗╔══╦═╗╔══╦═╗─║╔═╬═╣╚╣╠═╦══╗
+╔╣║╬║╩╣║║║║╬╚╣║║║╬╚╗║╚╗║╬║╔╬╣╩╣║║║
+╚═╩═╩═╝╚╩╩╩══╩╩╩╩══╝╚══╩═╩═╝╚═╩╩╩╝
+                                              ,           ^'^  _
+                                              )               (_) ^'^
+         _/\_                    .---------. ((        ^'^
+         (('>                    )`'`'`'`'`( ||                 ^'^
+    _    /^|                    /`'`'`'`'`'`\||           ^'^
+    =>--/__|m---               /`'`'`'`'`'`'`\|
+         ^^           ,,,,,,, /`'`'`'`'`'`'`'`\      ,
+                     .-------.`|`````````````|`  .   )
+                    / .^. .^. \|  ,^^, ,^^,  |  / \ ((
+                   /  |_| |_|  \  |__| |__|  | /,-,\||
+        _         /_____________\ |')| |  |  |/ |_| \|
+       (')         |  __   __  |  '==' '=='  /_______\     _
+      (' ')        | /  \ /  \ |   _______   |,^, ,^,|    (')
+       \  \        | |--| |--| |  ((--.--))  ||_| |_||   (' ')
+     _  ^^^ _      | |__| |('| |  ||  |  ||  |,-, ,-,|   /  /
+   ,' ',  ,' ',    |           |  ||  |  ||  ||_| |_||   ^^^
+.,,|RIP|,.|RIP|,.,,'==========='==''=='==''=='=======',,....,,,,.,ldb
+____________________________________________________________________________
+");
+
+        
+
+        Wizard wizerd01 = new Wizard();
+
+        wizerd01.name = "Perry Hopper";
+        wizerd01.favoriteSpell = "Unexpecto Petronum";
+        wizerd01.spellSlots = 2;
+        wizerd01.experience = 0f;
+
+        Console.WriteLine("Spell slots: " + wizerd01.spellSlots);
+
+        wizerd01.CastSpell();
+
+        Console.WriteLine("Spell slots: " + wizerd01.spellSlots);
+
+        Console.ReadKey();
+
+    }
+
+}
+_________________________________________________________________________________________________________________________________________________
+// demo 2 för class projektet
+using System;
+
+
+
+class Wizard
+{
+    public string name;
+    public string favoriteSpell;
+    public int spellSlots;
+    public float experience;
+
+    public void CastSpell()
+    {
+        if (spellSlots > 0)
+        {
+            Console.WriteLine(name + " casts " + favoriteSpell);
+            spellSlots--;
+            experience += 0.3f;
+        }
+        else
+        {
+            Console.WriteLine(name + " is out of spell slots. ");
+        }
+
+    }
+
+    public void Meditate()
+    {
+        Console.WriteLine(name + " meditate to regain spell slots.");
+        spellSlots = 2;
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Title = "Wizerd";
+        
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(@"
+─╔╗─────────────────╔══╗─╔╗╔╗
+─║╠═╦═╗╔══╦═╗╔══╦═╗─║╔═╬═╣╚╣╠═╦══╗
+╔╣║╬║╩╣║║║║╬╚╣║║║╬╚╗║╚╗║╬║╔╬╣╩╣║║║
+╚═╩═╩═╝╚╩╩╩══╩╩╩╩══╝╚══╩═╩═╝╚═╩╩╩╝
+                                              ,           ^'^  _
+                                              )               (_) ^'^
+         _/\_                    .---------. ((        ^'^
+         (('>                    )`'`'`'`'`( ||                 ^'^
+    _    /^|                    /`'`'`'`'`'`\||           ^'^
+    =>--/__|m---               /`'`'`'`'`'`'`\|
+         ^^           ,,,,,,, /`'`'`'`'`'`'`'`\      ,
+                     .-------.`|`````````````|`  .   )
+                    / .^. .^. \|  ,^^, ,^^,  |  / \ ((
+                   /  |_| |_|  \  |__| |__|  | /,-,\||
+        _         /_____________\ |')| |  |  |/ |_| \|
+       (')         |  __   __  |  '==' '=='  /_______\     _
+      (' ')        | /  \ /  \ |   _______   |,^, ,^,|    (')
+       \  \        | |--| |--| |  ((--.--))  ||_| |_||   (' ')
+     _  ^^^ _      | |__| |('| |  ||  |  ||  |,-, ,-,|   /  /
+   ,' ',  ,' ',    |           |  ||  |  ||  ||_| |_||   ^^^
+.,,|RIP|,.|RIP|,.,,'==========='==''=='==''=='=======',,....,,,,.,ldb
+____________________________________________________________________________
+");
+
+        
+
+        Wizard wizerd01 = new Wizard();
+
+        wizerd01.name = "Perry Hopper";
+        wizerd01.favoriteSpell = "Unexpecto Petronum";
+        wizerd01.spellSlots = 2;
+        wizerd01.experience = 0f;
+
+        
+
+        wizerd01.CastSpell();
+        wizerd01.CastSpell();
+        wizerd01.CastSpell();
+
+        wizerd01.Meditate();
+
+        wizerd01.CastSpell();
+        wizerd01.CastSpell();
+        Console.WriteLine("Experience: " + wizerd01.experience);
+
+        
+
+        Console.ReadKey();
+
+    }
+
+}
+____________________________________________________________________________________________________________________
+// class hela projektet
+using System;
+
+
+
+class Wizard
+{
+    public string name;
+    public string favoriteSpell;
+    private int spellSlots;
+    private float experience;
+
+    public static int Count;
+
+    public Wizard(String _name, string _favoriteSpell)
+    {
+        name = _name;
+        favoriteSpell = _favoriteSpell;
+        spellSlots = 2;
+        experience = 0f;
+
+        Count++;
+    }
+
+    public void CastSpell()
+    {
+        if (spellSlots > 0)
+        {
+            Console.WriteLine(name + " casts " + favoriteSpell);
+            spellSlots--;
+            experience += 0.3f;
+        }
+        else
+        {
+            Console.WriteLine(name + " is out of spell slots. ");
+        }
+
+    }
+
+    public void Meditate()
+    {
+        Console.WriteLine(name + " meditate to regain spell slots.");
+        spellSlots = 2;
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Title = "Wizerd";
+        
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(@"
+─╔╗─────────────────╔══╗─╔╗╔╗
+─║╠═╦═╗╔══╦═╗╔══╦═╗─║╔═╬═╣╚╣╠═╦══╗
+╔╣║╬║╩╣║║║║╬╚╣║║║╬╚╗║╚╗║╬║╔╬╣╩╣║║║
+╚═╩═╩═╝╚╩╩╩══╩╩╩╩══╝╚══╩═╩═╝╚═╩╩╩╝
+                                              ,           ^'^  _
+                                              )               (_) ^'^
+         _/\_                    .---------. ((        ^'^
+         (('>                    )`'`'`'`'`( ||                 ^'^
+    _    /^|                    /`'`'`'`'`'`\||           ^'^
+    =>--/__|m---               /`'`'`'`'`'`'`\|
+         ^^           ,,,,,,, /`'`'`'`'`'`'`'`\      ,
+                     .-------.`|`````````````|`  .   )
+                    / .^. .^. \|  ,^^, ,^^,  |  / \ ((
+                   /  |_| |_|  \  |__| |__|  | /,-,\||
+        _         /_____________\ |')| |  |  |/ |_| \|
+       (')         |  __   __  |  '==' '=='  /_______\     _
+      (' ')        | /  \ /  \ |   _______   |,^, ,^,|    (')
+       \  \        | |--| |--| |  ((--.--))  ||_| |_||   (' ')
+     _  ^^^ _      | |__| |('| |  ||  |  ||  |,-, ,-,|   /  /
+   ,' ',  ,' ',    |           |  ||  |  ||  ||_| |_||   ^^^
+.,,|RIP|,.|RIP|,.,,'==========='==''=='==''=='=======',,....,,,,.,ldb
+____________________________________________________________________________
+");
+
+        
+
+        Wizard wizerd01 = new Wizard("Parry Hopper","Unexpecto Petrounm");
+
+        wizerd01.CastSpell();
+
+        Wizard wizerd02 = new Wizard("Glindaf Merlinson", "Abracadabra");
+
+        wizerd02.CastSpell();
+
+        Console.WriteLine("");
+        Console.WriteLine("This is the amount of wizerd you got: " + Wizard.Count);
+
+   
+        
+
+        Console.ReadKey();
+
+    }
+
+}
